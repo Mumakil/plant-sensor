@@ -7,8 +7,8 @@
 
 #define MEASUREMENT_INTERVAL 5000
 
-#define THRESHOLD_WARN 600
-#define THRESHOLD_BAD 300
+#define THRESHOLD_WARN 850
+#define THRESHOLD_BAD 750
 
 int flipTimer = 200;
 
@@ -38,7 +38,7 @@ void setColor(int red, int yellow) {
 
 void setLedStatus() {
   if (avg > THRESHOLD_WARN) {
-    setColor(0, 32);
+    setColor(0, 16);
   } else if (avg > THRESHOLD_BAD) {
     setColor(0, 255);
   } else {
